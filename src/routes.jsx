@@ -5,6 +5,7 @@ import { GuestLayout } from "./layout/GuestLayout";
 import { DashboardPage } from "./pages/admin/DashobardPage";
 import { WelcomePage } from "./pages/frontend/WelcomePage";
 import { LoginPage } from "./pages/auth/LoginPage";
+import { RegisterPage } from "./pages/auth/RegisterPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +31,8 @@ export const router = createBrowserRouter([
   {
     path: "/auth/login",
     element: <LoginPage />,
+  },{
+    path: "/auth/register",
+    element: <RegisterPage />,
   },
 ]);
