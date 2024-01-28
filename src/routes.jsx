@@ -2,12 +2,20 @@ import { createBrowserRouter } from "react-router-dom";
 import AppShell from "./layout/DashboadLayout";
 import DashboardLayout from "./layout/DashboadLayout";
 import { GuestLayout } from "./layout/GuestLayout";
-import { DashboardPage } from "./pages/DashobardPage";
+import { DashboardPage } from "./pages/admin/DashobardPage";
+import { WelcomePage } from "./pages/frontend/WelcomePage";
+import { LoginPage } from "./pages/auth/LoginPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <GuestLayout />,
+    children: [
+      {
+        path: "/welcome",
+        element: <WelcomePage />,
+      },
+    ],
   },
   {
     path: "/admin",
@@ -18,5 +26,9 @@ export const router = createBrowserRouter([
         element: <DashboardPage />,
       },
     ],
+  },
+  {
+    path: "/auth/login",
+    element: <LoginPage />,
   },
 ]);
