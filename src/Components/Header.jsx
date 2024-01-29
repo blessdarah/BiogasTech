@@ -15,11 +15,11 @@ export const Header = () => {
 
       
 
-      <nav style={{display:'inline',gap:'4px' }}>
+      <nav style={{display:'inline',gap:'4px' ,marginTop:'-20px'}}>
         <Navbar />
       </nav>
 
-      <div style={{display:'flex',gap:'20px'}}>
+      <div style={{display:'flex',gap:'20px',}}>
 
         <Link  to={'/auth/register'}>
         <Button type="default">Enroll</Button>

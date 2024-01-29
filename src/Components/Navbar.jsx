@@ -50,23 +50,22 @@ const items = [
             }}
         >
            
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>Products</span>
+            <span className='default' style={{marginLeft:'12px', marginRight:'12px'}}>Products</span>
             
         </Dropdown>
-            <DownOutlined style={{width:'9px',marginLeft:'-5px',marginTop:'18px',display:'absolute',marginRight:'4px'}}  />
+            <DownOutlined style={{width:'9px',marginLeft:'-8px',marginTop:'18px',display:'absolute',marginRight:'4px'}}  />
 
 
 
      
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>About</span>
+            <span className='default' style={{marginLeft:'12px', marginRight:'12px'}}>About</span>
             
 
         
-            <span className='default'  style={{marginLeft:'8px', marginRight:'8px'}}>Shop</span>
             
 
         
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>Support</span>
+            <span className='default' style={{marginLeft:'12px', marginRight:'12px'}}>Support</span>
             
     </>)
 };

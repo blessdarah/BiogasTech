@@ -31,7 +31,24 @@
     color: rgb(58, 56, 56);
 }
 
+.rounded{
+    border-radius: 50%;
+}
 
+.footer {
+    background-color: rgb(129, 123, 123);
+    width: 100vw;
+    height: 50px;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 18%;
+    padding: 5px;
+
+}
+
+
+.bg-hover:hover{
+    background-color:rgb(6, 189, 6) ;
+}
 
 .text-test{
     color: rgb(129, 123, 123);
