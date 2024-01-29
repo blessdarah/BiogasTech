@@ -73,11 +73,6 @@ export function LoginPage() {
             min: 5,
             message: "Password must be minimum 8 chars long",
           },
-          // {
-          //   pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).*$",
-          //   message:
-          //     "Must have at least a uppercase and lowercase and a special character",
-          // },
         ]}
       >
         <Input type="password" autoComplete="password" />
