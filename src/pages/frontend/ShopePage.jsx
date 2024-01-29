@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 export function ShopPage() {
   const products = useSelector((state) => state.productState.products);
+  const categories = useSelector((state) => state.categoryState.categories);
   return (
     <>
       <div>
@@ -16,12 +17,11 @@ export function ShopPage() {
             <h3>Filter</h3>
             <Input />
             <Space direction="vertical">
-              <Checkbox name="Expensive">Category 1</Checkbox>
-              <Checkbox name="Expensive">Category 2</Checkbox>
-              <Checkbox name="Expensive">Category 3</Checkbox>
-              <Checkbox name="Expensive">Category 4</Checkbox>
-              <Checkbox name="Expensive">Category 5</Checkbox>
-              <Checkbox name="Expensive">Category 6</Checkbox>
+              {categories.map((category) => (
+                <Checkbox key={category.id} name={category.id}>
+                  {category.name}
+                </Checkbox>
+              ))}
             </Space>
           </Col>
 
