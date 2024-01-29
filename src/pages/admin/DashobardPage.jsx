@@ -1,3 +1,6 @@
+import { useDispatch, useSelector } from "react-redux";
+
 export function DashboardPage() {
-  return <div>Dashboard content goes here</div>;
+  const { access } = useSelector((state) => state.auth.authState);
+  return <div>Token: {access}</div>;
 }

@@ -1,15 +1,31 @@
 import { Button, Form, Input } from "antd";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/auth.slice";
 
 export function LoginPage() {
   const [form] = Form.useForm();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const user = {
-    username: "Test user",
     email: "user@test.com",
+    password: "hellothere",
   };
 
-  const onFinish = (values) => {
-    console.log("values: ", values);
+  const onFinish = async (values) => {
+    try {
+      const res = await axios.post(
+        "http://localhost:8000/account/api/token/",
+        values,
+      );
+      const response = await res.data;
+      dispatch(login(response));
+      navigate("/admin");
+    } catch (err) {
+      console.log("err: ", err.message);
+    }
   };
 
   return (
@@ -24,26 +40,49 @@ export function LoginPage() {
         margin: "2rem auto",
       }}
     >
-      <h3>Login</h3>
+      <header style={{ textAlign: "center" }}>
+        <Link to={"/"}>
+          <img src="/logo.png" width="200px" alt="logo" />
+        </Link>
+        <h3>Login</h3>
+      </header>
+
       <Form.Item
-        name="username"
-        label="Enter your username"
+        name="email"
+        label="Enter your email"
         rules={[
           {
             required: true,
-            message: "Username is required",
+            message: "email is required",
           },
         ]}
       >
-        <Input />
-      </Form.Item>
-      <Form.Item name="email" label="Enter your email">
         <Input type="email" />
       </Form.Item>
 
-      <Button htmlType="submit" type="primary">
+      <Form.Item
+        name="password"
+        label="Enter your password"
+        rules={[
+          {
+            required: true,
+            message: "Password must be provided",
+          },
+          {
+            min: 5,
+            message: "Password must be minimum 8 chars long",
+          },
+        ]}
+      >
+        <Input type="password" autoComplete="password" />
+      </Form.Item>
+
+      <Button htmlType="submit" block type="primary">
         Login
       </Button>
+      <p style={{ textAlign: "center" }}>
+        Don't have an account? <Link to={"/auth/register"}>Sign up</Link>
+      </p>
     </Form>
   );
 }

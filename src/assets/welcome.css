@@ -1,0 +1,130 @@
+.text-5xl{
+    font-size:60px;
+}
+
+.test{
+    background: red;
+}
+
+
+.min-h-fit{
+    height: fit-content;
+}
+
+.rounded-full{
+    border-radius: 24%;
+}
+
+.rounded-20{
+    border-radius: 15%;
+}
+.rounded-10{
+    border-radius: 10%;
+}
+
+
+.font-bold{
+    font-weight: bold;
+}
+
+.text-gray{
+    color: rgb(58, 56, 56);
+}
+
+
+
+.text-test{
+    color: rgb(129, 123, 123);
+}
+
+.text-test{
+    color: rgb(241, 239, 239);
+}
+
+
+.description{
+    margin-top: -18px;
+}
+
+.object-cover
+{
+    object-fit: cover;
+}
+
+.h-full
+{
+    height: 100%;
+}
+
+.li
+{
+    line-height: 23px;
+    margin-top: -50px;
+    
+
+
+
+}
+
+
+.ligne{
+    line-height: 23px;
+}
+
+
+.overflow-x-hidden{
+
+    overflow-x: hidden;
+}
+
+.anime-come
+{
+    animation: come 3s ease-out 1s 1 forwards ;
+}
+
+
+@keyframes come {
+    0%{
+        opacity: 0.1;
+        transform: translateX(30px)
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translate(-20px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px)
+
+    }
+}
+
+.opacity-0
+{
+    opacity: 0;
+}
+
+
+.mt-10
+{
+    margin-top: 50px;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.text-wrap{
+    word-wrap: break-word;
+}
+
+.-mt-10{
+    margin-top: -40px;
+}
+
+.mt-10{
+    margin-top: 50px;
+}

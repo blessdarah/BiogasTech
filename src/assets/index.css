@@ -7,6 +7,26 @@
     display: flex;
 }
 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.active{
+    font-weight: bold;
+    color: rgb(6, 189, 6);
+}
+
+.default:hover{
+    color: rgb(6, 189, 6);
+    cursor: pointer;
+}
+
 
 .test{
     background-color: red;
@@ -47,4 +67,15 @@
 .cursor{
 
     cursor: pointer;
+}
+
+
+@font-face {
+    font-family: roboto;
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+
+*,body{
+  font-family: roboto;
 }
