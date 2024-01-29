@@ -1,72 +1,25 @@
-import React from 'react';
-import {  Dropdown } from 'antd';
+import React from "react";
+import { Badge, Dropdown, Space } from "antd";
 
-
-import '../assets/index.css'
-import { DownOutlined } from '@ant-design/icons';
+import "../assets/index.css";
+import { DownOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
-
-    
-const items = [
-    {
-        key: '1',
-        label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                1st menu item
-            </a>
-        ),
-    },
-    {
-        key: '2',
-        label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                2nd menu item
-            </a>
-        ),
-    },
-    {
-        key: '3',
-        label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-                3rd menu item
-            </a>
-        ),
-    },
-];
-
-
-
-  return (   <>
-        
-        <span className='active' style={{marginLeft:'8px', marginRight:'8px'}}>Home</span>
-        <Dropdown
-            menu={{
-                items,
-            }}
-            placement="bottom"
-            arrow={{
-                pointAtCenter: true,
-            }}
-        >
-           
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>Products</span>
-            
-        </Dropdown>
-            <DownOutlined style={{width:'9px',marginLeft:'-5px',marginTop:'18px',display:'absolute',marginRight:'4px'}}  />
-
-
-
-     
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>About</span>
-            
-
-        
-            <span className='default'  style={{marginLeft:'8px', marginRight:'8px'}}>Shop</span>
-            
-
-        
-            <span className='default' style={{marginLeft:'8px', marginRight:'8px'}}>Support</span>
-            
-    </>)
+  const cart = useSelector((state) => state.cartState.cart);
+  return (
+    <Space size="middle">
+      <Link to="/">Home</Link>
+      <Link to="/">About</Link>
+      <Link to="/shop">Shop</Link>
+      <Link to="/">Support</Link>
+      <Link to="/checkout">
+        <Badge count={cart.length ?? 0}>
+          Cart <ShoppingCartOutlined />
+        </Badge>
+      </Link>
+    </Space>
+  );
 };
+

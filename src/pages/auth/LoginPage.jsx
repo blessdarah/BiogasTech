@@ -1,8 +1,7 @@
 import { Button, Form, Input } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { useAuth } from "../../hooks/auth.hook";
+import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth.slice";
 
 export function LoginPage() {

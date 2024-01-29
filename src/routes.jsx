@@ -6,6 +6,8 @@ import { WelcomePage } from "./pages/frontend/WelcomePage";
 import { LoginPage } from "./pages/auth/LoginPage";
 import { RegisterPage } from "./pages/auth/RegisterPage";
 import { ProfilePage } from "./pages/admin/ProfilePage";
+import { ShopPage } from "./pages/frontend/ShopePage";
+import { CartPage } from "./pages/frontend/CartPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <WelcomePage />,
+      },
+      {
+        path: "shop",
+        element: <ShopPage />,
+      },
+      {
+        path: "checkout",
+        element: <CartPage />,
       },
     ],
   },
