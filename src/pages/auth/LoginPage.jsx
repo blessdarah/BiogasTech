@@ -1,16 +1,32 @@
 import { Button, Form, Input } from "antd";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useAuth } from "../../hooks/auth.hook";
+import { login } from "../../redux/auth.slice";
 
 export function LoginPage() {
   const [form] = Form.useForm();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const user = {
-    username: "Test user",
-    password: "testuser",
+    email: "user@test.com",
+    password: "hellothere",
   };
 
-  const onFinish = (values) => {
-    console.log("values: ", values);
+  const onFinish = async (values) => {
+    try {
+      const res = await axios.post(
+        "http://localhost:8000/account/api/token/",
+        values,
+      );
+      const response = await res.data;
+      dispatch(login(response));
+      navigate("/admin");
+    } catch (err) {
+      console.log("err: ", err.message);
+    }
   };
 
   return (
@@ -33,16 +49,16 @@ export function LoginPage() {
       </header>
 
       <Form.Item
-        name="username"
-        label="Enter your username"
+        name="email"
+        label="Enter your email"
         rules={[
           {
             required: true,
-            message: "Username is required",
+            message: "email is required",
           },
         ]}
       >
-        <Input />
+        <Input type="email" />
       </Form.Item>
 
       <Form.Item
@@ -54,14 +70,14 @@ export function LoginPage() {
             message: "Password must be provided",
           },
           {
-            min: 8,
+            min: 5,
             message: "Password must be minimum 8 chars long",
           },
-          {
-            pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).*$",
-            message:
-              "Must have at least a uppercase and lowercase and a special character",
-          },
+          // {
+          //   pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).*$",
+          //   message:
+          //     "Must have at least a uppercase and lowercase and a special character",
+          // },
         ]}
       >
         <Input type="password" autoComplete="password" />
