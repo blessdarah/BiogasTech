@@ -5,6 +5,7 @@ import { DashboardPage } from "./pages/admin/DashobardPage";
 import { WelcomePage } from "./pages/frontend/WelcomePage";
 import { LoginPage } from "./pages/auth/LoginPage";
 import { RegisterPage } from "./pages/auth/RegisterPage";
+import { ProfilePage } from "./pages/admin/ProfilePage";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <DashboardPage />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
       },
     ],
   },
