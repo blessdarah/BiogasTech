@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { loadProducts } from "../../redux/product.slice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { loadCategories } from "../../redux/category.slice";
 
 export function WelcomePage() {
   const dispatch = useDispatch();
@@ -16,6 +17,11 @@ export function WelcomePage() {
       const pResult = await axios.get("http://localhost:8000/api/productlist");
       const products = await pResult.data;
       dispatch(loadProducts(products));
+
+      // load categories
+      const cresult = await axios.get("http://localhost:8000/api/categories");
+      const categories = await cresult.data;
+      dispatch(loadCategories(categories));
     } catch (err) {
       console.log("err: ", err.message);
     }
