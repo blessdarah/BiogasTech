@@ -3,6 +3,9 @@ import {  Dropdown } from 'antd';
 
 
 import '../assets/index.css'
+import '../assets/mobile.css'
+
+
 import { DownOutlined } from '@ant-design/icons';
 
 export const Navbar = () => {
@@ -37,7 +40,7 @@ const items = [
 
 
 
-  return (   <>
+  return (   <nav className='max-770'>
         
         <span className='active' style={{marginLeft:'8px', marginRight:'8px'}}>Home</span>
         <Dropdown
@@ -67,5 +70,5 @@ const items = [
         
             <span className='default' style={{marginLeft:'12px', marginRight:'12px'}}>Support</span>
             
-    </>)
+    </nav>)
 };

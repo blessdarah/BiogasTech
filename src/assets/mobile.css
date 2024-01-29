@@ -1,0 +1,37 @@
+
+@media only screen and (max-width: 770px) {
+    /* Styles for small screens */
+
+    .image-1{
+        display: none;
+    }
+
+    .max-770{
+        display: none;
+    }
+
+    .welcome{
+        font-size:45px;
+    }
+
+    .hero{
+        width: 100%;
+    }
+
+    .hero2{
+        width: 0%;
+        display: none;
+    }
+
+    .hero-containe
+    {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .cardP{
+      display: flex;
+      flex-direction: column;  
+    }
+  }
+

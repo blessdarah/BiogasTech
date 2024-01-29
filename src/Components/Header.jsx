@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "./navbar";
 import { Button } from "antd";
+import '../assets/mobile.css'
 
 export const Header = () => {
   return (
@@ -19,7 +20,7 @@ export const Header = () => {
       </div>
 
 
-      <nav style={{ display: "inline", gap: "4px"}}>
+      <nav className="max-770" style={{ display: "inline", gap: "4px"}}>
         <Navbar />
       </nav>
 

@@ -1,5 +1,7 @@
 import { Button } from "antd";
 import '../../assets/index.css'
+import '../../assets/mobile.css'
+
 
 import { } from '../../assets/welcome.css'
 import { CheckOutlined } from "@ant-design/icons";
@@ -11,19 +13,18 @@ import Footer from "../../Components/footer";
 export function WelcomePage() {
 
   return (<section className="overflow-x-hidden">
-    <section style={{ display: 'flex', width: '100%', paddingLeft: '3%', paddingRight: '3%' }}>
-      <div style={{ paddingLeft: '30px', width: '55%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-        <div className=" min-h-fit">
-          <p className="text-5xl font-bold">
-            Lorem ipsum dolor sit amet,  <span style={{ color: 'rgb(6, 189, 6)' }}>consectetur</span>  adipisicing isicing
-
+    <section className="hero-containe flex " style={{  width: '100%', paddingLeft: '3%', paddingRight: '3%' }}>
+      <div className="hero max-770" style={{ paddingLeft: '30px', width: '55%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <div className="  min-h-fit">
+          <p className="text-5xl welcome font-bold">
+            Effective <span style={{ color: 'rgb(6, 189, 6)' }}> waste  management </span> is  a sustainable future.
           </p>
 
         </div>
 
         <div className="text-gray li h-full" style={{ marginTop: '-10px' }}>
           <p className="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ea placeat. Eum corporis veniam ea quisquam aliquam blanditiis omnis molestiae, consequuntur autem eligendi doloremque voluptatibus dolore dignissimos tempore laborum! Iusto!
+          BioWaste Tech is a company that provides innovative and sustainable agricultural waste management solutions. We help farmers transform their waste into valuable resources, especially their environmental impact.
           </p>
 
           <Button type="primary" icons={<CheckOutlined />} size={'large'}>
@@ -32,8 +33,8 @@ export function WelcomePage() {
         </div>
       </div>
 
-      <div style={{ width: '45%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-        <img height='470px' className="rounded-full opacity-0  anime-come" src="/assets/recolte-3-no-min.jpg" alt="" srcset="" />
+      <div className="hero2 flex" style={{ width: '45%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <img height='500px' className="rounded-full image-1 opacity-0  anime-come" src="/assets/recolte-3-no-min.jpg" alt="" srcset="" />
 
       </div>
 
@@ -42,19 +43,19 @@ export function WelcomePage() {
     </section>
 
 
-    <section className="" style={{ background: 'rgb(129, 123, 123)', color: 'white', paddingLeft: '10%', marginTop: '100px', paddingTop: '50px', paddingRight: '10%', paddingBottom: '100px', display: 'flex', flexDirection: 'column' }}>
+    <section className="" style={{ background: 'rgb(192, 192, 192)', color: 'black', paddingLeft: '10%', marginTop: '100px', paddingTop: '50px', paddingRight: '10%', paddingBottom: '100px', display: 'flex', flexDirection: 'column' }}>
 
-      <Typography.Title level={1} style={{ color: 'white', }} className="font-bold text-gre"  >
+      <Typography.Title level={1} style={{ color: 'rgb(27, 27, 27)', }} className="font-bold text-gre"  >
         Ours Products
       </Typography.Title>
 
 
-      <div className="" style={{ display: 'flex', gap: '10px', flexDirection: 'row',  width: '100%', justifyContent: 'space-between' }}>
+      <div className="max-770" style={{ display: 'flex', gap: '10px', flexDirection: 'row',  width: '100%', justifyContent: 'space-between' }}>
 
-        <div className="ligne" style={{ paddingLeft: '10px', color: 'rgb(241, 239, 239)',  paddingRight: '50px', marginTop: '80px' }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure libero autem adipisci rerum aut, nulla dolorum assumenda
-          log Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis recusandae ea provident ratione veritatis eum. Quisquam nam qui asperiores eaque numquam eligendi, esse consequuntur aperiam vel saepe minima inventore?
-          voluptas maiores aspernatur repellat necessitatibus nobis, tempora, voluptatem itaque tenetur. Qui, repudiandae consectetur!
+        <div className="ligne" style={{ paddingLeft: '10px', color: 'rgb(27, 27, 27)',  paddingRight: '50px', marginTop: '40px' }}>
+        Biochar is a type of charcoal produced from agricultural, forestry or urban biomass. It is obtained by pyrolysis, a combustion process in the absence of oxygen. Pyrolysis breaks down biomass into a mixture of gases, liquids and solids. Biochar is the solid remaining after pyrolysis.
+
+Biochar is a value-added product that has many advantages. It is particularly used as a soil amendment, to improve its fertility and structure. It is also used as fuel, to produce heat or electricity.
         </div>
 
         <div style={{ padding: '10px', background: 'white', }} className="rounded-10">
@@ -65,13 +66,13 @@ export function WelcomePage() {
       <div style={{ display: 'flex', gap: '10px', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
 
         <div style={{ padding: '10px', background: 'white', }} className="rounded-10">
-          <img src="/assets/5d55d33730f93d0ef60a17b7ae0a966d__1_-removebg-preview.png" className="rounded-10 object-cover" width='250px' height='250px' alt="" srcset="" />
+          <img src="/assets/5d55d33730f93d0ef60a17b7ae0a966d__1_-removebg-preview.png" className="rounded-10 object-cover min-h-fit " width='250px' height='250px' alt="" srcset="" />
         </div>
-        <div className="ligne" style={{ paddingLeft: '50px', color: 'rgb(241, 239, 239)',  paddingRight: '50px', marginTop: '80px' }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure libero autem adipisci rerum aut, nulla dolorum assumenda
-          log Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis recusandae ea provident ratione veritatis eum. Quisquam nam qui asperiores eaque numquam eligendi, esse consequuntur aperiam vel saepe minima inventore?
-          voluptas maiores aspernatur repellat necessitatibus nobis, tempora, voluptatem itaque tenetur. Qui, repudiandae consectetur!
-        </div>
+        <div className="ligne" style={{ paddingLeft: '50px', color: 'rgb(27, 27, 27)',  paddingRight: '50px', marginTop: '80px' }}>
+        Biogas is a gas produced by the fermentation of biomass. It is composed mainly of methane, carbon dioxide and other gases.
+
+Biogas can be used as an energy source to produce heat, electricity or fuel. It is also used to produce compost.
+          </div>
 
 
       </div>
@@ -80,9 +81,7 @@ export function WelcomePage() {
       <div style={{ display: 'flex', gap: '10px', flexDirection: 'row', width: '100%', justifyContent: 'space-between', marginTop: '40px' }}>
 
         <div className="ligne" style={{ paddingLeft: '10px', paddingRight: '50px', marginTop: '30px' }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure libero autem adipisci rerum aut, nulla dolorum assumenda
-          log Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis recusandae ea provident ratione veritatis eum. Quisquam nam qui asperiores eaque numquam eligendi, esse consequuntur aperiam vel saepe minima inventore?
-          voluptas maiores aspernatur repellat necessitatibus nobis, tempora, voluptatem itaque tenetur. Qui, repudiandae consectetur!
+        Les produits BioWaste Tech ont de bonnes perspectives de développement. La demande de produits respectueux de l'environnement et durables est en croissance constante. BioWaste Tech est bien positionnée pour répondre à cette demande.
         </div>
 
         <div style={{ padding: '10px', color: 'rgb(241, 239, 239)', background: 'white', }} className="rounded-10">
