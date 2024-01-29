@@ -11,7 +11,7 @@ export const useSidebarRoutes = () => {
     {
       icon: <UserOutlined />,
       label: "Dashboard",
-      key: "/admin/dashboard",
+      key: "/admin",
     },
     {
       icon: <VideoCameraOutlined />,
