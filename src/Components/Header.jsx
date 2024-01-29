@@ -34,3 +34,6 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
+>>>>>>> 114979c (feat: Add state management and handle application login)
