@@ -1,18 +1,23 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { Button, Flex, Layout, Menu, theme } from "antd";
+import { Avatar, Button, Flex, Layout, Menu, Popover, theme } from "antd";
 import React, { useState } from "react";
 import { Outlet, useNavigate } from "react-router";
 import { useSidebarRoutes } from "./SidebarRoutes";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/auth.slice";
 const { Header, Sider, Content } = Layout;
 
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { sidebarRoutes } = useSidebarRoutes();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
   return (
     <Layout>
       <Sider
@@ -48,8 +53,32 @@ const DashboardLayout = () => {
                 height: 64,
               }}
             />
-            <div></div>
-            <Button>Testing</Button>
+            <div style={{ marginRight: "1rem" }}>
+              <Popover
+                style={{ cursor: "pointer" }}
+                content={
+                  <Menu
+                    mode="vertical"
+                    style={{ border: "none", minWidth: "8rem" }}
+                    items={[
+                      {
+                        label: <Link to="profile">Profile</Link>,
+                      },
+                      {
+                        label: "Logout",
+                        onClick: () => {
+                          dispatch(logout);
+                          navigate("/");
+                        },
+                      },
+                    ]}
+                  />
+                }
+                trigger="click"
+              >
+                <span>Username</span> <Avatar src="https://picsum.photos/20" />
+              </Popover>
+            </div>
           </Flex>
         </Header>
         <Content
