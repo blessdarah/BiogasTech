@@ -1,13 +1,9 @@
 import { Button, Form, Input } from "antd";
-<<<<<<< HEAD
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../hooks/auth.hook";
 import { login } from "../../redux/auth.slice";
-=======
-import { Link } from "react-router-dom";
->>>>>>> dev
 
 export function LoginPage() {
   const [form] = Form.useForm();
@@ -15,13 +11,9 @@ export function LoginPage() {
   const dispatch = useDispatch();
 
   const user = {
-<<<<<<< HEAD
+
     email: "user@test.com",
     password: "hellothere",
-=======
-    username: "Test user",
-    password: "testuser",
->>>>>>> dev
   };
 
   const onFinish = async (values) => {
@@ -119,7 +111,6 @@ export function LoginPage() {
         <Input type="password" autoComplete="password" />
       </Form.Item>
 
->>>>>>> dev
       <Button htmlType="submit" block type="primary">
         Login
       </Button>
