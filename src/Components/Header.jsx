@@ -34,4 +34,7 @@ export const Header = () => {
     </header>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3327bc5625e46c10b0b1dd860aff5e9856f2d5a4

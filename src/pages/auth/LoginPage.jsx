@@ -58,7 +58,38 @@ export function LoginPage() {
           },
         ]}
       >
+<<<<<<< HEAD
         <Input type="email" />
+=======
+<<<<<<< HEAD
+        <Input type="email" />
+      </Form.Item>
+
+      <Form.Item
+        name="password"
+        label="Enter your password"
+        rules={[
+          {
+            required: true,
+            message: "Password must be provided",
+          },
+          {
+            min: 5,
+            message: "Password must be minimum 8 chars long",
+          },
+          // {
+          //   pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).*$",
+          //   message:
+          //     "Must have at least a uppercase and lowercase and a special character",
+          // },
+        ]}
+      >
+        <Input type="password" autoComplete="password" />
+      </Form.Item>
+
+=======
+        <Input />
+>>>>>>> 3327bc5625e46c10b0b1dd860aff5e9856f2d5a4
       </Form.Item>
 
       <Form.Item
