@@ -118,7 +118,7 @@
 
 
 .footer {
-    background-color: rgb(129, 123, 123);
+    background-color: rgb(192, 192, 192);
     width: 100vw;
     height: 50px;
     border-top-left-radius: 30%;
@@ -140,6 +140,13 @@
     color: rgb(241, 239, 239);
 }
 
+.rotate-90{
+  rotate: 90deg;
+}
+.test2
+{
+  color: rgb(27, 27, 27);
+}
 
 .description{
     margin-top: -18px;

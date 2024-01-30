@@ -33,8 +33,8 @@ export function WelcomePage() {
         </div>
       </div>
 
-      <div className="hero2 flex" style={{ width: '45%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-        <img height='500px' className="rounded-full image-1 opacity-0  anime-come" src="/assets/recolte-3-no-min.jpg" alt="" srcset="" />
+      <div className="hero2  flex" style={{ width: '45%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <img height='320px'  className="rounded-full rotate-90 image-1 opacity-0  anime-come" src="/assets/waste.PNG" alt="" srcset="" />
 
       </div>
 
@@ -59,7 +59,7 @@ Biochar is a value-added product that has many advantages. It is particularly us
         </div>
 
         <div style={{ padding: '10px', background: 'white', }} className="rounded-10">
-          <img src="/assets/f06db194cc5b6d9b0bf6d4116d69a8e0.jpg" className="rounded-10 object-cover" width='250px' height='250px' alt="" srcset="" />
+          <img src="/assets/greenchaco.pngg.PNG" className="rounded-10 object-cover" width='250px' height='250px' alt="" srcset="" />
         </div>
       </div>
 
@@ -107,19 +107,20 @@ Biogas can be used as an energy source to produce heat, electricity or fuel. It 
         <div className="w-full  text-wrap" style={{ paddingRight: '5%', paddingLeft: '5%' }}>
 
 
-          <p className="mt-20" style={{ marginTop: '40px' }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iusto labore laboriosam placeat qui <span style={{ color: 'rgb(6, 189, 6)', }} className='font-bold'> eum minus  omnis corrupti rerum ab?  Laborum </span> sapiente nam vitae cupiditate. Perferendis dolores deserunt dignissimos quos.
-            Lorem ipsum, dolor sit amet  consectetur  adipisicing elit. Ipsam mollitia architecto  suscipit sunt magni distinctio, explicabo quos consequuntur dolores commodi? Sequi ad
+          <p className="mt-20" style={{ marginTop: '40px' }}> 
 
+            There are several ways to create charcoal using waste, and the best method for you will depend on the type and amount of waste you have available, as well as your desired level of production and quality
           </p>
 
-          <div style={{ display: 'flex', justifyContent: 'center' }} className="w-full">
-            <img src="/assets/compost-removebg-preview.png" alt="" srcset="" />
-          </div>
-
-          <div style={{ marginTop: '10px' }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dicta totam eos atque exercitationem id hic? Obcaecati molestias eaque in dolores eos quam deleniti alias fuga praesentium blanditiis, non voluptatem.
+          <div style={{ display: 'flex', justifyContent: 'space-between' }} className="w-full">
+            <img src="/assets/procces.png" alt="" srcset="" />
+            <img src="/assets/machine.PNG" alt="" srcset="" />
 
           </div>
+
+          
+
+          
 
         </div>
 
