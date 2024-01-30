@@ -7,6 +7,7 @@ import '../assets/mobile.css'
 
 
 import { DownOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
@@ -15,24 +16,24 @@ const items = [
     {
         key: '1',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                1st menu item
-            </a>
+            <Link target="_blank" rel="noopener noreferrer" to="#biochar">
+                Biochar
+            </Link>
         ),
     },
     {
         key: '2',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                2nd menu item
+            <a target="_blank" rel="noopener noreferrer" href="#biogaz">
+                Biogaz
             </a>
         ),
     },
     {
         key: '3',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-                3rd menu item
+            <a target="_blank" rel="noopener noreferrer" href="#food">
+                Food
             </a>
         ),
     },
@@ -41,7 +42,7 @@ const items = [
 
 
   return (   <nav className='max-770'>
-        
+       
         <span className='active' style={{marginLeft:'8px', marginRight:'8px'}}>Home</span>
         <Dropdown
             menu={{
